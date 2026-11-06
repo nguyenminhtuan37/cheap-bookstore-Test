@@ -1,0 +1,20 @@
+<div class="form-popup">
+    <div id="actionBtn">
+        <button type="button" class="btn cancel" (click)="onHandleCancel()">🗙</button>
+        <button type="button" class="btn save" (click)="onHandleSave()">✓</button>
+    </div>
+    <h3>{{ state() === 'create' ? 'Tạo mớii' : 'Cập nhật' }}</h3>
+    <form class="form-container">
+        <section>
+            <b>Tên danh mục</b>
+            <input type="text" [formField]="formCategory.name" />
+        </section>
+        <section>
+            <b>Mô tả</b>
+            <input type="text" [formField]="formCategory.desc" />
+        </section>
+    </form>
+</div>
+
+
+
